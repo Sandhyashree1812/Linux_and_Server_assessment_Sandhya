@@ -79,42 +79,14 @@ Others (4 = r--) → can read only
 
 #Objective: Create 4 Linux users. Two of them must have write access to the log_user.sh script created in Question 2, and the other two must have read-only access. Use Linux groups and chmod to control this.
 
-1.Create a group called writers
+1. Create the writers group
+    sudo groupadd writers
 
-2.Create 4 users with home directories:
+   <img width="767" height="433" alt="image" src="https://github.com/user-attachments/assets/2297adb6-f353-433c-9035-8dae16cdf1f0" />
 
+2. Create 4 users with home directories
 
-<img width="558" height="453" alt="image" src="https://github.com/user-attachments/assets/d12bc217-4537-4399-a096-d686641912fe" />
-
-3. Add the two write-access users to the writers group:
-
-<img width="621" height="223" alt="image" src="https://github.com/user-attachments/assets/080f555c-6537-4d51-8166-583380f8f6e9" />
-
-
-4. Change the group ownership of log_user.sh to writers: sudo chown root:writers /home/ec2-user/webapp/scripts/log_user.sh
-5. Set permissions to 664 so writers group gets rw and others get r only: sudo chmod 664 /home/ec2-user/webapp/scripts/log_user.sh
-
-6.Verify the permission output shows: -rw-rw-r--  root  writers  log_user.sh
-
-
-
-   <img width="1026" height="165" alt="image" src="https://github.com/user-attachments/assets/916f8fb6-c62f-40ef-8ebd-17c56a2d8e6b" />
-
-
-the output shows the explanation as below:
-Owner (root) = 6 = rw- → read, write
-Group (writers) = 6 = rw- → read, write
-Others = 4 = r-- → read only
-
-7.Switch to each user and test access to confirm it is working correctly:
-
-
-8. Permission Layout (chmod 664):
-
-   chmod 664 log_user.sh
-       6          6          4
-  Owner(rw)  Group(rw)  Others(r)
-   root      writers    devuser3, devuser4
+3. 
 
 
 
