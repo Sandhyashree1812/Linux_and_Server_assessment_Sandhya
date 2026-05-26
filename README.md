@@ -82,11 +82,43 @@ Others (4 = r--) → can read only
 1. Create the writers group
     sudo groupadd writers
 
+2. Create 4 users with home directories
+sudo useradd -m devuser1
+sudo useradd -m devuser2
+sudo useradd -m devuser3
+sudo useradd -m devuser4
+
+sudo passwd devuser1
+sudo passwd devuser2
+sudo passwd devuser3
+sudo passwd devuser4
+   
    <img width="767" height="433" alt="image" src="https://github.com/user-attachments/assets/2297adb6-f353-433c-9035-8dae16cdf1f0" />
 
-2. Create 4 users with home directories
+3. Add write-access users to the writers group
+   sudo usermod -aG writers devuser1
+   sudo usermod -aG writers devuser2
+   groups devuser1
+   groups devuser2
 
-3. 
+   <img width="1062" height="127" alt="image" src="https://github.com/user-attachments/assets/15e1e2b6-9867-4d9b-9b8b-66c4a503616b" />
+
+5.  Change group ownership of the script
+   sudo chown root:writers /home/ec2-user/webapp/scripts/log_user.sh
+
+8. Set permissions to 664
+    sudo chmod 664 /home/ec2-user/webapp/scripts/log_user.sh
+
+<img width="918" height="553" alt="image" src="https://github.com/user-attachments/assets/4165d7e9-7e3f-422f-baef-6b041810b6e5" />
+
+6. Verify permissions
+
+Run:
+
+ls -l /home/ec2-user/webapp/scripts/log_user.sh
+
+
+
 
 
 
