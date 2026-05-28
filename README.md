@@ -117,6 +117,9 @@ Run:
 
 ls -l /home/ec2-user/webapp/scripts/log_user.sh
 
+<img width="847" height="48" alt="image" src="https://github.com/user-attachments/assets/b49aeae3-9d60-4185-8b12-4ed811a54693" />
+
+
 
 
 
