@@ -119,6 +119,16 @@ ls -l /home/ec2-user/webapp/scripts/log_user.sh
 
 <img width="847" height="48" alt="image" src="https://github.com/user-attachments/assets/b49aeae3-9d60-4185-8b12-4ed811a54693" />
 
+su - devuser1
+
+<img width="790" height="85" alt="image" src="https://github.com/user-attachments/assets/5c936806-bff7-45dd-aba4-f76fc9070681" />
+
+exit
+
+Repeat for Devuser2
+
+<img width="980" height="128" alt="image" src="https://github.com/user-attachments/assets/81f98655-aa73-47c6-90cb-5f0720e72b29" />
+
 
 
 
