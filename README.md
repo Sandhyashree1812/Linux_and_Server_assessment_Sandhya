@@ -144,6 +144,32 @@ type exit to quit.
 
    <img width="980" height="128" alt="image" src="https://github.com/user-attachments/assets/81f98655-aa73-47c6-90cb-5f0720e72b29" />
 
+ 10. Test read-only access, Switch to Devuser3
+
+     Test write access for Devuser3
+
+     echo "Test for Devuser3" >> /home/ec2-user/webapp/scripts/log_user.sh
+
+     <img width="1092" height="415" alt="image" src="https://github.com/user-attachments/assets/6a37c2f5-de3e-402f-a3af-60e660561b24" />
+
+11. Test read-only access and wite access of Devuser4
+
+     <img width="1017" height="622" alt="image" src="https://github.com/user-attachments/assets/6291db82-7250-4f39-89d1-8e53a64b9030" />
+
+     <img width="1048" height="402" alt="image" src="https://github.com/user-attachments/assets/06fc4b2f-0ba8-402e-933b-182fc95690fe" />
+
+12. Check permissions for the file
+
+     <img width="1142" height="82" alt="image" src="https://github.com/user-attachments/assets/a7b723aa-8d81-4f2a-b819-d7a5f50ea561" />
+
+     ===================================================================
+    
+
+
+
+
+       
+
 
 
 
