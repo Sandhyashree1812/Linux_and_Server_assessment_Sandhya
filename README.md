@@ -80,9 +80,11 @@ Others (4 = r--) → can read only
 #Objective: Create 4 Linux users. Two of them must have write access to the log_user.sh script created in Question 2, and the other two must have read-only access. Use Linux groups and chmod to control this.
 
 1. Create the writers group
+   
     sudo groupadd writers
 
 2. Create 4 users with home directories
+   
 sudo useradd -m devuser1
 sudo useradd -m devuser2
 sudo useradd -m devuser3
@@ -96,38 +98,51 @@ sudo passwd devuser4
    <img width="767" height="433" alt="image" src="https://github.com/user-attachments/assets/2297adb6-f353-433c-9035-8dae16cdf1f0" />
 
 3. Add write-access users to the writers group
+4. 
    sudo usermod -aG writers devuser1
    sudo usermod -aG writers devuser2
+   
    groups devuser1
    groups devuser2
 
    <img width="1062" height="127" alt="image" src="https://github.com/user-attachments/assets/15e1e2b6-9867-4d9b-9b8b-66c4a503616b" />
 
 5.  Change group ownership of the script
+     Owner = root
+     Group = writers
+
+    
    sudo chown root:writers /home/ec2-user/webapp/scripts/log_user.sh
 
-8. Set permissions to 664
+6. Set permissions to 664
+   
     sudo chmod 664 /home/ec2-user/webapp/scripts/log_user.sh
 
-<img width="918" height="553" alt="image" src="https://github.com/user-attachments/assets/4165d7e9-7e3f-422f-baef-6b041810b6e5" />
+   <img width="918" height="553" alt="image" src="https://github.com/user-attachments/assets/4165d7e9-7e3f-422f-baef-6b041810b6e5" />
 
-6. Verify permissions
-
-Run:
+7. Verify permissions
 
 ls -l /home/ec2-user/webapp/scripts/log_user.sh
 
 <img width="847" height="48" alt="image" src="https://github.com/user-attachments/assets/b49aeae3-9d60-4185-8b12-4ed811a54693" />
 
-su - devuser1
+8. Test write access for Devuser1 , Switch to Devuser1
+
+   su - devuser1
+
+   echo "test from devuser1" >> /home/ec2-user/webapp/scripts/log_user.sh
 
 <img width="790" height="85" alt="image" src="https://github.com/user-attachments/assets/5c936806-bff7-45dd-aba4-f76fc9070681" />
 
-exit
+type exit to quit.
 
-Repeat for Devuser2
+9. Repeat for Devuser2
 
-<img width="980" height="128" alt="image" src="https://github.com/user-attachments/assets/81f98655-aa73-47c6-90cb-5f0720e72b29" />
+   su - devuser2
+
+   echo "test from devuser2" >> /home/ec2-user/webapp/scripts/log_user.sh
+
+   <img width="980" height="128" alt="image" src="https://github.com/user-attachments/assets/81f98655-aa73-47c6-90cb-5f0720e72b29" />
 
 
 
